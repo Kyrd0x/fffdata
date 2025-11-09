@@ -2,20 +2,18 @@
 
 Client Python pour l'API publique de la FFF.
 
-
-# Méthode simple
-client = FFFClient()
-match = client.get_match_entities("3010203")
-print(match)
-client.close()
-
-# Ou avec context manager (recommandé)
-with FFFClient() as client:
-    match = client.get_match_entities("3010203")
-    print(match)
+EN COURS
 
 
+## Installation
 
+```sh
+pip install git+https://github.com/Kyrd0x/fffdata.git
+```
+
+## Exemples
+
+```py
 from fffdata import FFFClient
 
 with FFFClient() as client:
@@ -33,3 +31,4 @@ with FFFClient() as client:
         print(f"{club.name} - {club.location}")
         print(f"Téléphones: {', '.join(club.get_phone_numbers())}")
         print(f"District: {club.district.name}")
+```
